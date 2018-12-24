@@ -64,13 +64,13 @@ gulp.task('server', () => {
 		}
 	});
 
-	gulp.watch('./src/*.html').on('change', () => {
+	gulp.watch('src/*.html').on('change', () => {
 		gulp.series('html')();
 		browserSync.reload();
 	});
-	gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
-	gulp.watch('./src/js/*.js', gulp.series('scripts'));
-	gulp.watch('./src/assets/*', gulp.series('copy-assets'));
+	gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
+	gulp.watch('src/js/*.js', gulp.series('scripts'));
+	gulp.watch('src/assets/*', gulp.series('copy-assets'));
 });
 
 gulp.task('default', gulp.series('html', 'sass', 'scripts', 'copy-assets'));

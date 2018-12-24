@@ -1,0 +1,60 @@
+@import 'variables';
+@import 'reset';
+
+$padding-body: 30px;
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+	color: $gray;
+	padding: $padding-body;
+}
+
+.header {
+	height: 95vh;
+	background-image: linear-gradient(
+			to right bottom,
+			$light-green-transparent,
+			$dark-green-transparent
+		),
+		url(../assets/hero.jpeg);
+	background-color: $light-green;
+	background-size: cover;
+	background-position: top;
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		height: 35px;
+	}
+
+	&__primary-heading {
+		display: inline-block;
+		position: absolute;
+		top: calc(50% - #{$padding-body});
+		left: calc(50% - #{$padding-body});
+		transform: translate(-50%, -50%);
+
+		& span {
+			color: $white;
+			display: block;
+		}
+
+		&__main {
+			font-size: 5rem;
+			font-weight: 400;
+			letter-spacing: 35px;
+		}
+
+		&__sub {
+			font-size: 1.5rem;
+			font-weight: 700;
+			letter-spacing: 1rem;
+		}
+	}
+}
