@@ -1,0 +1,14 @@
+@import 'variables';
+
+.button {
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&--white {
+		background-color: $white;
+		color: $gray;
+	}
+}
