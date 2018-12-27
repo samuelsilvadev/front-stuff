@@ -1,6 +1,10 @@
 @import 'variables';
+@import 'mixins';
 @import 'reset';
 @import 'buttons';
+
+@include move-animation-mixin(moveFromLeft, -50%);
+@include move-animation-mixin(moveFromRight, 50%);
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -53,18 +57,21 @@ body {
 		& span {
 			color: $white;
 			display: block;
+			animation-duration: 2s;
 		}
 
 		&__main {
 			font-size: 5rem;
 			font-weight: 400;
 			letter-spacing: 35px;
+			animation-name: moveFromLeft;
 		}
 
 		&__sub {
 			font-size: 1.5rem;
 			font-weight: 700;
 			letter-spacing: 1rem;
+			animation-name: moveFromRight;
 		}
 	}
 }

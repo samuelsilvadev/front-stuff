@@ -1,0 +1,13 @@
+@mixin move-animation-mixin($name, $offset) {
+	@keyframes #{$name} {
+		0% {
+			opacity: 0;
+			transform: translateX($offset);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
