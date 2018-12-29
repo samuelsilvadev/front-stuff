@@ -75,3 +75,22 @@ body {
 		}
 	}
 }
+
+@media (xs-breakpoint()) {
+	body {
+		padding: 0;
+	}
+	.header {
+		&__primary-heading {
+			&__main {
+				font-size: 4rem;
+				letter-spacing: normal;
+			}
+
+			&__sub {
+				font-size: 1.4rem;
+				letter-spacing: normal;
+			}
+		}
+	}
+}
