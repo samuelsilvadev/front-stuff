@@ -5,18 +5,18 @@
 
 @include move-animation-mixin(moveFromLeft, -50%);
 @include move-animation-mixin(moveFromRight, 50%);
+@include move-animation-mixin(moveFromBottom, 0, 200%);
 
 body {
+	color: $gray;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.7;
-	color: $gray;
 	padding: $padding-body;
 }
 
 .header {
-	height: 95vh;
 	background-image: linear-gradient(
 			to right bottom,
 			$light-green-transparent,
@@ -27,38 +27,39 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	height: 95vh;
 	position: relative;
 
 	&__logo {
+		height: 35px;
+		left: 40px;
 		position: absolute;
 		top: 40px;
-		left: 40px;
-		height: 35px;
 	}
 
 	&__wrapper--centered {
 		display: inline-block;
+		left: 50%;
 		position: absolute;
 		top: calc(50% - #{$padding-body});
-		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}
 
 	&__primary-heading {
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 
 		& span {
+			animation-duration: 2s;
 			color: $white;
 			display: block;
-			animation-duration: 2s;
 		}
 
 		&__main {
+			animation-name: moveFromLeft;
 			font-size: 5rem;
 			font-weight: 400;
 			letter-spacing: 35px;
-			animation-name: moveFromLeft;
 		}
 
 		&__sub {
@@ -70,6 +71,9 @@ body {
 	}
 
 	&__button {
+		animation-name: moveFromBottom;
+		animation-duration: 3s;
+		animation-fill-mode: backwards;
 		border-radius: 100px;
 		padding: 15px 40px;
 		position: relative;
