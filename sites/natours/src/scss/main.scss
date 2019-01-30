@@ -7,11 +7,18 @@
 @include move-animation-mixin(moveFromRight, 50%);
 @include move-animation-mixin(moveFromBottom, 0, 200%);
 
+/*
+	This technique is applied using as base 16px.
+	10 / 16 = 0.625;
+*/
+html {
+	font-size: 62.5%;
+}
+
 body {
 	color: $gray;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 16px;
 	line-height: 1.7;
 	padding: $padding-body;
 }
@@ -31,10 +38,10 @@ body {
 	position: relative;
 
 	&__logo {
-		height: 35px;
-		left: 40px;
+		height: 3.5rem;
+		left: 4rem;
 		position: absolute;
-		top: 40px;
+		top: 4rem;
 	}
 
 	&__wrapper--centered {
@@ -47,7 +54,7 @@ body {
 	}
 
 	&__primary-heading {
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 
 		& span {
 			animation-duration: 2s;
@@ -57,15 +64,15 @@ body {
 
 		&__main {
 			animation-name: moveFromLeft;
-			font-size: 5rem;
+			font-size: 8rem;
 			font-weight: 400;
-			letter-spacing: 35px;
+			letter-spacing: 3.5rem;
 		}
 
 		&__sub {
-			font-size: 1.5rem;
+			font-size: 2.4rem;
 			font-weight: 700;
-			letter-spacing: 1rem;
+			letter-spacing: 1.6rem;
 			animation-name: moveFromRight;
 		}
 	}
@@ -74,8 +81,9 @@ body {
 		animation-name: moveFromBottom;
 		animation-duration: 3s;
 		animation-fill-mode: backwards;
-		border-radius: 100px;
-		padding: 15px 40px;
+		border-radius: 10rem;
+		font-size: 1.6rem;
+		padding: 1.5rem 4rem;
 		position: relative;
 		text-transform: uppercase;
 
@@ -104,16 +112,17 @@ body {
 @media (xs-breakpoint()) {
 	body {
 		padding: 0;
+		background: red;
 	}
 	.header {
 		&__primary-heading {
 			&__main {
-				font-size: 4rem;
+				font-size: 6.4rem;
 				letter-spacing: normal;
 			}
 
 			&__sub {
-				font-size: 1.4rem;
+				font-size: 2.24rem;
 				letter-spacing: normal;
 			}
 		}
