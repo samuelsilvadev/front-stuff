@@ -54,30 +54,6 @@ body {
 		text-align: center;
 	}
 
-	&__primary-heading {
-		margin-bottom: 4rem;
-
-		& span {
-			animation-duration: 2s;
-			color: $white;
-			display: block;
-		}
-
-		&__main {
-			animation-name: moveFromLeft;
-			font-size: 8rem;
-			font-weight: 400;
-			letter-spacing: 3.5rem;
-		}
-
-		&__sub {
-			font-size: 2.4rem;
-			font-weight: 700;
-			letter-spacing: 1.6rem;
-			animation-name: moveFromRight;
-		}
-	}
-
 	&__button {
 		animation-name: moveFromBottom;
 		animation-duration: 3s;
@@ -110,22 +86,43 @@ body {
 	}
 }
 
+.primary-heading {
+	margin-bottom: 4rem;
+
+	& span {
+		animation-duration: 2s;
+		color: $white;
+		display: block;
+	}
+
+	&--main {
+		animation-name: moveFromLeft;
+		font-size: 8rem;
+		font-weight: 400;
+		letter-spacing: 3.5rem;
+	}
+
+	&--sub {
+		animation-name: moveFromRight;
+		font-size: 2.4rem;
+		font-weight: 700;
+		letter-spacing: 1.6rem;
+	}
+}
+
 @media (xs-breakpoint()) {
 	body {
 		padding: 0;
-		background: red;
 	}
-	.header {
-		&__primary-heading {
-			&__main {
-				font-size: 6.4rem;
-				letter-spacing: normal;
-			}
+	.primary-heading {
+		&--main {
+			font-size: 6.4rem;
+			letter-spacing: normal;
+		}
 
-			&__sub {
-				font-size: 2.24rem;
-				letter-spacing: normal;
-			}
+		&--sub {
+			font-size: 2.24rem;
+			letter-spacing: normal;
 		}
 	}
 }
