@@ -110,7 +110,7 @@ body {
 	}
 }
 
-@media (xs-breakpoint()) {
+@include for-phone-only {
 	body {
 		padding: 0;
 	}
