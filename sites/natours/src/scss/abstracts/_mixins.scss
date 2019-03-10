@@ -41,3 +41,15 @@
 		}
 	}
 }
+
+/*
+	Clearfix for parent of floated elements
+*/
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
