@@ -1,17 +1,6 @@
-@mixin move-animation-mixin($name, $x: 0, $y: 0) {
-	@keyframes #{$name} {
-		0% {
-			opacity: 0;
-			transform: translateX($x) translateY($y);
-		}
-
-		100% {
-			opacity: 1;
-			transform: translateX(0) translateY(0);
-		}
-	}
-}
-
+/*
+	Media queries
+*/
 @mixin for-phone-only {
 	@media (max-width: 767px) {
 		@content;
@@ -29,8 +18,26 @@
 		@content;
 	}
 }
+
 @mixin for-desktop {
 	@media (min-width: 1281px) {
 		@content;
+	}
+}
+
+/*
+	move animation generator
+*/
+@mixin move-animation-mixin($name, $x: 0, $y: 0) {
+	@keyframes #{$name} {
+		0% {
+			opacity: 0;
+			transform: translateX($x) translateY($y);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateX(0) translateY(0);
+		}
 	}
 }

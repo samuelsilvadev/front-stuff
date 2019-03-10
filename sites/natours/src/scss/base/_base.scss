@@ -1,0 +1,18 @@
+/*
+	This technique is applied using as base 16px.
+	10 / 16 = 0.625;
+*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	padding: $padding-body;
+}
+
+@include for-phone-only {
+	body {
+		padding: 0;
+	}
+}
