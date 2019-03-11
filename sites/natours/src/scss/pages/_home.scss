@@ -7,4 +7,31 @@
 	&__title {
 		margin-bottom: 8rem;
 	}
+
+	&__texts {
+		text-align: left;
+
+		&__subtitle {
+			margin-bottom: 1.5rem;
+		}
+
+		&__btn-learn-more {
+			font-size: 1.6rem;
+			background-color: $light-gray-1;
+			border-bottom: 0.1rem solid $light-green;
+			color: $light-green;
+			padding: 0.5rem;
+			transition-property: background-color, color, transform;
+			transition-duration: 0.2s;
+			transition-timing-function: linear;
+
+			&:hover,
+			&:focus {
+				background-color: $light-green;
+				box-shadow: 0 1rem 2rem rgba($black, 0.15);
+				color: $white;
+				transform: translateY(-0.5rem);
+			}
+		}
+	}
 }
