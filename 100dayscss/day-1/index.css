@@ -1,0 +1,51 @@
+body {
+	background-color: #0984e3;
+}
+
+.title {
+	color: #fff;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.box {
+	background-color: #ff7675;
+}
+
+.text {
+	color: #fff;
+	font-size: 1.8rem;
+	line-height: 2rem;
+	height: 2rem;
+	overflow: hidden;
+}
+
+.text-dynamic-wrapper {
+	animation-name: slideUp;
+	animation-duration: 16s;
+	animation-delay: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-2rem);
+	}
+	50% {
+		transform: translateY(-4rem);
+	}
+	75% {
+		transform: translateY(-6rem);
+	}
+	100% {
+		transform: translateY(-8rem);
+	}
+}
