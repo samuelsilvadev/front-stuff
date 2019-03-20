@@ -1,0 +1,52 @@
+body {
+	background-color: #a29bfe;
+}
+
+.title {
+	color: #fff;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.square {
+	background-color: #e84393;
+	height: 400px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 400px;
+}
+
+.ball {
+	animation-name: move;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	background-color: #a29bfe;
+	border-radius: 100%;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+}
+
+@keyframes move {
+	0% {
+		transform: translate(0, -50%);
+	}
+	25% {
+		box-shadow: -15px 0 10px #a29bfe;
+	}
+	50% {
+		transform: translate(calc(400px - 100%), -50%);
+	}
+	75% {
+		box-shadow: 15px 0 10px #a29bfe;
+	}
+	100% {
+		transform: translate(0, -50%);
+	}
+}
