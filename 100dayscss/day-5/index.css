@@ -1,0 +1,32 @@
+body {
+	background-color: #5f27cd;
+}
+
+.title {
+	color: #fff;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.box {
+	background-color: #ff7675;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+}
+
+.center > :not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.button {
+	border: 0;
+	cursor: pointer;
+	font-size: 0.9rem;
+	height: 60px;
+	text-transform: uppercase;
+	width: 200px;
+}
