@@ -28,5 +28,24 @@ body {
 	font-size: 0.9rem;
 	height: 60px;
 	text-transform: uppercase;
+	transition-property: box-shadow, transform;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
 	width: 200px;
+}
+
+.button:hover {
+	transform: scale(1.05);
+}
+
+.button:nth-child(1):hover {
+	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.31);
+}
+
+.button:nth-child(2):hover {
+	box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.31);
+}
+
+.button:nth-child(3):hover {
+	box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.31);
 }
