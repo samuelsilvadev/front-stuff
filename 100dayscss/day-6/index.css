@@ -1,0 +1,102 @@
+body {
+	background-color: #32ff7e;
+}
+
+.title {
+	color: #fff;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.box {
+	background-color: #636e72;
+}
+
+.center {
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+}
+
+.dot {
+	background-color: #fff;
+	height: 40px;
+	position: absolute;
+	transform: scale(0);
+	width: 40px;
+}
+
+.dot-1 {
+	animation: grow 1s forwards, rotate 1s forwards 1.19s;
+}
+
+.dot-2 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.11s;
+	animation-fill-mode: forwards;
+}
+
+.dot-3 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.12s;
+	animation-fill-mode: forwards;
+}
+
+.dot-4 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.13s;
+}
+
+.dot-5 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.14s;
+}
+
+.dot-6 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.15s;
+}
+
+.dot-7 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.16s;
+}
+
+.dot-8 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.17s;
+}
+
+.dot-9 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.18s;
+}
+
+.dot-10 {
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-delay: 1.19s;
+}
+
+@keyframes grow {
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0) scale(1);
+	}
+	to {
+		transform: rotate(360deg) scale(1);
+	}
+}
