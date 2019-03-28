@@ -2,6 +2,10 @@ body {
 	background-color: #fed330;
 }
 
+.preload * {
+	transition: none !important;
+}
+
 .title {
 	color: #fff;
 	font-weight: 700;
