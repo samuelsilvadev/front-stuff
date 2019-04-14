@@ -35,3 +35,19 @@
 		}
 	}
 }
+
+.features {
+	background-image: linear-gradient(
+			to right bottom,
+			$light-green-transparent,
+			$dark-green-transparent
+		),
+		url(../assets/nat-4.jpg);
+	background-color: $light-green;
+	background-size: cover;
+	padding: 20rem 0;
+
+	&__box__subtitle {
+		margin-bottom: 1.5rem;
+	}
+}
