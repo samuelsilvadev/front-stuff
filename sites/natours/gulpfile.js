@@ -19,6 +19,15 @@ const source = require('vinyl-source-stream');
 const plumber = require('gulp-plumber');
 const sourceMaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
+const imagemin = require('gulp-imagemin');
+
+gulp.task('images-compression', () => {
+	return gulp.src('dist/assets/*')
+		.pipe(imagemin({
+			verbose: true,
+		}))
+		.pipe(gulp.dest('dist/assets'))
+});
 
 gulp.task('sass', () => {
 	return gulp
@@ -70,7 +79,7 @@ gulp.task('server', () => {
 	});
 	gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
 	gulp.watch('src/js/*.js', gulp.series('scripts'));
-	gulp.watch('src/assets/*', gulp.series('copy-assets'));
+	gulp.watch('src/assets/*', gulp.series('copy-assets', 'images-compression'));
 });
 
-gulp.task('default', gulp.series('html', 'sass', 'scripts', 'copy-assets'));
+gulp.task('default', gulp.series('html', 'sass', 'scripts', 'copy-assets', 'images-compression'));
