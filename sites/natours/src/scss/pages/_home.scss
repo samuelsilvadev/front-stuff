@@ -1,9 +1,12 @@
-.about {
+.about,
+.tours {
 	background-color: $light-gray-1;
 	padding: 25rem 0;
 	margin-top: -20vh;
 	text-align: center;
+}
 
+.about {
 	&__title {
 		margin-bottom: 8rem;
 	}
