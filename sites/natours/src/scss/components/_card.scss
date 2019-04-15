@@ -1,0 +1,33 @@
+.card {
+	height: 50rem;
+	perspective: 150rem;
+	position: relative;
+
+	&__side {
+		box-shadow: 0 1.5rem 4rem rgba($black, .15);
+		backface-visibility: hidden;
+		height: 100%;
+		position: absolute;
+		transition: transform 0.9s ease;
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		&--front {
+			background-color: $white;
+		}
+
+		&--back {
+			background-color: $white;
+			transform: rotateY(180deg);
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+}
