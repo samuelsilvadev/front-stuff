@@ -1,0 +1,14 @@
+{
+  "name": "blurred-caption-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Samuel Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
