@@ -4,13 +4,13 @@
 	padding: 25rem 0;
 	margin-top: -20vh;
 	text-align: center;
-}
 
-.about {
 	&__title {
 		margin-bottom: 8rem;
 	}
+}
 
+.about {
 	&__texts {
 		text-align: left;
 
@@ -58,5 +58,24 @@
 
 	& > * {
 		transform: skewY(7deg);
+	}
+}
+
+.tours {
+	&__card {
+		&__header {
+			&--1 {
+				background-image: linear-gradient(
+						to right bottom,
+						$selective-yellow,
+						$burning-orange
+					),
+					url(../assets/nat-5.jpg);
+			}
+		}
+
+		&--back--1 {
+			background: linear-gradient(to right bottom, $selective-yellow, $burning-orange);
+		}
 	}
 }
