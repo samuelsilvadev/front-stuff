@@ -3,3 +3,41 @@
     margin: 0;
     padding: 0;
 }
+
+.title {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.images-grid {
+    margin: 100px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 400px;
+    list-style: none;
+}
+
+.images-grid__figure {
+    position: relative;
+    background-color: #eee;
+    height: 100%;
+}
+
+.images-grid__figure__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.images-grid__figure__caption {
+    align-items: center;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0.1));
+    color: #fff;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
