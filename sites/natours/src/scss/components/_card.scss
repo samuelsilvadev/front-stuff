@@ -73,6 +73,30 @@
 		}
 	}
 
+	&__cta {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+	}
+
+	&__price {
+		color: $white;
+		margin-bottom: 8rem;
+		text-align: center;
+
+		&__only {
+			font-size: 1.4rem;
+			text-transform: capitalize;
+		}
+
+		&__value {
+			font-size: 6rem;
+			font-weight: 100;
+		}
+	}
+
 	&:hover &__side--front {
 		transform: rotateY(-180deg);
 	}
