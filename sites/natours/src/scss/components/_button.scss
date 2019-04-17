@@ -9,4 +9,34 @@
 		background-color: $white;
 		color: $gray;
 	}
+
+	&--global {
+		border-radius: 10rem;
+		font-size: 1.6rem;
+		padding: 1.5rem 4rem;
+		position: relative;
+		text-transform: uppercase;
+	}
+
+	&--grow {
+		&:hover {
+			&::after {
+				opacity: 0;
+				transform: scaleX(1.4) scaleY(1.6);
+			}
+		}
+
+		&::after {
+			background-color: $white;
+			border-radius: inherit;
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: opacity 0.5s, transform 0.5s;
+			width: 100%;
+			z-index: -1;
+		}
+	}
 }
