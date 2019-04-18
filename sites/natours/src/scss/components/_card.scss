@@ -40,7 +40,7 @@
 		text-align: right;
 		text-transform: uppercase;
 		top: 10rem;
-		width: 50%;
+		width: 70%;
 		z-index: 1;
 	}
 
@@ -53,6 +53,22 @@
 				to right bottom,
 				rgba($selective-yellow, 0.85),
 				rgba($burning-orange, 0.85)
+			);
+		}
+
+		&--2 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($medium-green, 0.85),
+				rgba($dark-green, 0.85)
+			);
+		}
+
+		&--3 {
+			background-image: linear-gradient(
+				to right bottom,
+				rgba($dodger-blue, 0.85),
+				rgba($royal-blue, 0.85)
 			);
 		}
 	}
