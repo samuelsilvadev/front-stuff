@@ -19,6 +19,8 @@
 	}
 
 	&--grow {
+		position: relative;
+
 		&:hover {
 			&::after {
 				opacity: 0;
@@ -27,7 +29,7 @@
 		}
 
 		&::after {
-			background-color: $white;
+			background-color: inherit;
 			border-radius: inherit;
 			content: '';
 			height: 100%;
@@ -36,7 +38,12 @@
 			top: 0;
 			transition: opacity 0.5s, transform 0.5s;
 			width: 100%;
-			z-index: -1;
+			z-index: 0;
+		}
+
+		&__text {
+			position: relative;
+			z-index: 1;
 		}
 	}
 }

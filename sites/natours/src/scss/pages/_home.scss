@@ -62,6 +62,8 @@
 }
 
 .tours {
+	padding-bottom: 8rem;
+
 	&__card {
 		&__header {
 			&--1 {
@@ -105,5 +107,10 @@
 				background: linear-gradient(to right bottom, $dodger-blue, $royal-blue);
 			}
 		}
+	}
+
+	&__button {
+		background-color: $medium-green;
+		color: $white;
 	}
 }
