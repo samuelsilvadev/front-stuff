@@ -13,6 +13,12 @@
 	}
 }
 
+@mixin gte-laptop {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}
+
 @mixin for-laptop {
 	@media (min-width: 1025px) and (max-width: 1280px) {
 		@content;
