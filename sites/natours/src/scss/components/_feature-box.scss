@@ -6,8 +6,10 @@
 	text-align: center;
 	transition: transform 0.3s linear;
 
-	&:hover {
-		transform: translateY(-1.5rem) scale(1.03);
+	@include gte-laptop {
+		&:hover {
+			transform: translateY(-1.5rem) scale(1.03);
+		}
 	}
 
 	&__icon {
