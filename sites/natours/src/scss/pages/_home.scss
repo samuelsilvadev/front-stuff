@@ -130,3 +130,21 @@
 		color: $white;
 	}
 }
+
+.tours {
+	& .tours__column.tours__column.tours__column {
+		@include for-phone-only {
+			width: 100%;
+		}
+
+		@include for-tablet {
+			width: 90%;
+		}
+
+		@include lte-tablet {
+			float: none;
+			margin: auto;
+			padding: 1rem;
+		}
+	}
+}
