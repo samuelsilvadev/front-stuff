@@ -1,5 +1,6 @@
 .about,
-.tours {
+.tours,
+.stories {
 	background-color: $light-gray-1;
 	padding: 25rem 0;
 	margin-top: -20vh;
@@ -148,3 +149,5 @@
 		}
 	}
 }
+
+.stories {}
