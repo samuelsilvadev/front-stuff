@@ -1,0 +1,39 @@
+.story {
+	@include clearfix;
+
+	box-shadow: 0 3rem 6rem rgba($black, 0.1);
+	font-size: 1.6rem;
+	margin: 0 auto;
+	padding: 6rem;
+	padding-left: 9rem;
+	text-align: left;
+	transform: skewX(-10deg);
+	width: 100%;
+
+	& > * {
+		transform: skewX(10deg);
+	}
+
+	@include gte-laptop {
+		width: 75%;
+	}
+
+	&__shape {
+		clip-path: circle(50% at 50% 50%);
+		float: left;
+		height: 15rem;
+		shape-outside: circle(50% at 50% 50%);
+		transform: translateX(-3rem) skewX(10deg);
+		width: 15rem;
+	}
+
+	&__image {
+		height: 100%;
+	}
+
+	&__text {
+		&__title {
+			margin-bottom: 1rem;
+		}
+	}
+}
