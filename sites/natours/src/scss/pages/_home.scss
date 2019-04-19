@@ -61,6 +61,22 @@
 	}
 }
 
+.features {
+	& .features__column.features__column.features__column {
+		@include for-phone-only {
+			float: none;
+			padding: 1rem;
+			width: 100%;
+		}
+
+		@include for-tablet {
+			margin-right: 0;
+			padding: 1rem;
+			width: 50%;
+		}
+	}
+}
+
 .tours {
 	padding-bottom: 8rem;
 
