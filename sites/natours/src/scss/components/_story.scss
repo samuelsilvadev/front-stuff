@@ -4,6 +4,7 @@
 	box-shadow: 0 3rem 6rem rgba($black, 0.1);
 	font-size: 1.6rem;
 	margin: 0 auto;
+	margin-bottom: 5rem;
 	padding: 1rem;
 	text-align: center;
 	width: 100%;
@@ -60,6 +61,7 @@
 	}
 
 	@include gte-laptop {
+		margin-bottom: 10rem;
 		padding: 6rem;
 		padding-left: 9rem;
 		text-align: left;

@@ -142,11 +142,6 @@
 			}
 		}
 	}
-
-	&__button {
-		background-color: $medium-green;
-		color: $white;
-	}
 }
 
 .tours {
@@ -167,4 +162,10 @@
 	}
 }
 
-.stories {}
+.tours,
+.stories {
+	&__button {
+		background-color: $medium-green;
+		color: $white;
+	}
+}
