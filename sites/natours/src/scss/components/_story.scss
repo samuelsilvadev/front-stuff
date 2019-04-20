@@ -4,26 +4,16 @@
 	box-shadow: 0 3rem 6rem rgba($black, 0.1);
 	font-size: 1.6rem;
 	margin: 0 auto;
-	padding: 6rem;
-	padding-left: 9rem;
-	text-align: left;
-	transform: skewX(-10deg);
+	padding: 1rem;
+	text-align: center;
 	width: 100%;
-
-	& > * {
-		transform: skewX(10deg);
-	}
-
-	@include gte-laptop {
-		width: 75%;
-	}
 
 	&__shape {
 		clip-path: circle(50% at 50% 50%);
-		float: left;
 		height: 15rem;
+		margin: auto;
+		margin-bottom: 4rem;
 		shape-outside: circle(50% at 50% 50%);
-		transform: translateX(-3rem) skewX(10deg);
 		width: 15rem;
 	}
 
@@ -34,6 +24,28 @@
 	&__text {
 		&__title {
 			margin-bottom: 1rem;
+		}
+	}
+
+	@include for-tablet {
+		width: 90%;
+	}
+
+	@include gte-laptop {
+		padding: 6rem;
+		padding-left: 9rem;
+		text-align: left;
+		transform: skewX(-10deg);
+		width: 75%;
+
+		&__text {
+			transform: skewX(10deg);
+		}
+
+		&__shape {
+			float: left;
+			margin-bottom: auto;
+			transform: translateX(-3rem) skewX(10deg);
 		}
 	}
 }
