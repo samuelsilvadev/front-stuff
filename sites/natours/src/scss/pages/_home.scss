@@ -12,6 +12,10 @@
 }
 
 .about {
+	@include for-phone-only {
+		margin-bottom: 15rem;
+	}
+
 	&__texts {
 		text-align: left;
 
@@ -36,6 +40,19 @@
 				color: $white;
 				transform: translateY(-0.5rem);
 			}
+		}
+	}
+}
+
+.about {
+	& .about__column.about__column.about__column {
+		@include for-phone-only {
+			float: none;
+			width: 100%;
+		}
+
+		@include lte-tablet {
+			padding: 1rem;
 		}
 	}
 }
