@@ -110,20 +110,12 @@
 			}
 
 			&--2 {
-				background-image: linear-gradient(
-						to right bottom,
-						$medium-green,
-						$dark-green
-					),
+				background-image: linear-gradient(to right bottom, $medium-green, $dark-green),
 					url(../assets/nat-6.jpg);
 			}
 
 			&--3 {
-				background-image: linear-gradient(
-						to right bottom,
-						$dodger-blue,
-						$royal-blue
-					),
+				background-image: linear-gradient(to right bottom, $dodger-blue, $royal-blue),
 					url(../assets/nat-7.jpg);
 			}
 		}
@@ -172,5 +164,26 @@
 	&__button {
 		background-color: $medium-green;
 		color: $white;
+	}
+}
+
+.book {
+	background-image: linear-gradient(to right bottom, $light-green, $dark-green);
+	padding: 15rem 0;
+
+	&__content {
+		background-image: linear-gradient(
+				105deg,
+				rgba($white, 0.9) 0%,
+				rgba($white, 0.9) 50%,
+				transparent 50%
+			),
+			url('../assets/nat-10.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+		height: 50rem;
+		margin: auto;
+		max-width: $grid-width;
 	}
 }
