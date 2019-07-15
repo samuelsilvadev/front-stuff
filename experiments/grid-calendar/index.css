@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	background-color: #037ef3;
+	color: #fff;
+	min-height: 100vh;
+}
+
+.calendar__day-of-week,
+.calendar__date-grid {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__day-of-week > * {
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.calendar__date-grid {
+	grid-template-rows: repeat(5, 150px);
+}
+
+.calendar__date-grid button:first-child {
+	grid-column: 6;
+}
+
+.calendar__date-grid button {
+	background-color: #f85a40;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	font-size: 18px;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.calendar__date-grid button:active,
+.calendar__date-grid button:focus {
+	background-color: #f37865;
+	outline: 0;
+}
