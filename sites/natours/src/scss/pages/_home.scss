@@ -171,6 +171,12 @@
 	background-image: linear-gradient(to right bottom, $light-green, $dark-green);
 	padding: 15rem 0;
 
+	&__title {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		max-width: 50%;
+	}
+
 	&__content {
 		background-image: linear-gradient(
 				105deg,
@@ -184,6 +190,11 @@
 		box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
 		height: 50rem;
 		margin: auto;
+		padding: 0 5rem;
 		max-width: $grid-width;
+	}
+
+	&__form {
+		width: 40%;
 	}
 }
