@@ -3,6 +3,10 @@
 		margin-bottom: 2rem;
 	}
 
+	&__group--fix-inline-block {
+		font-size: 0;
+	}
+
 	&__input {
 		background-color: rgba($white, 0.5);
 		border: none;
@@ -44,5 +48,59 @@
 		opacity: 0;
 		transform: translateY(-4rem);
 		visibility: hidden;
+	}
+
+	&__radio {
+		&-group {
+			display: inline-block;
+			width: 50%;
+		}
+
+		&-input {
+			opacity: 0;
+			position: absolute;
+			visibility: hidden;
+		}
+
+		&-input:checked + &-label::after {
+			opacity: 1;
+		}
+
+		&-label {
+			cursor: pointer;
+			font-size: 1.6rem;
+			position: relative;
+			padding-left: 3.2rem;
+
+			&::before {
+				border-radius: 100%;
+				border: 0.5rem solid $light-green;
+				content: '';
+				display: inline-block;
+				height: 3rem;
+				left: 0;
+				position: absolute;
+				top: 0;
+				transform: translateY(-25%);
+				user-select: none;
+				width: 3rem;
+			}
+
+			&::after {
+				border-radius: 100%;
+				background-color: $light-green;
+				content: '';
+				display: inline-block;
+				height: 1.5rem;
+				left: 0.5rem;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				transform: translateX(calc(50% - 0.5rem));
+				transition: opacity 200ms linear;
+				user-select: none;
+				width: 1.5rem;
+			}
+		}
 	}
 }
