@@ -160,7 +160,8 @@
 }
 
 .tours,
-.stories {
+.stories,
+.book {
 	&__button {
 		background-color: $medium-green;
 		color: $white;
@@ -196,5 +197,9 @@
 
 	&__form {
 		width: 40%;
+	}
+
+	&__button {
+		margin-top: 1rem;
 	}
 }
