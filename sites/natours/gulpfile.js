@@ -22,11 +22,14 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 
 gulp.task('images-compression', () => {
-	return gulp.src('dist/assets/*')
-		.pipe(imagemin({
-			verbose: true,
-		}))
-		.pipe(gulp.dest('dist/assets'))
+	return gulp
+		.src('dist/assets/*')
+		.pipe(
+			imagemin({
+				verbose: true
+			})
+		)
+		.pipe(gulp.dest('dist/assets'));
 });
 
 gulp.task('sass', () => {
@@ -67,12 +70,6 @@ gulp.task('copy-assets', () => {
 });
 
 gulp.task('server', () => {
-	browserSync.init({
-		server: {
-			baseDir: './dist/'
-		}
-	});
-
 	gulp.watch('src/*.html').on('change', () => {
 		gulp.series('html')();
 		browserSync.reload();
@@ -80,6 +77,12 @@ gulp.task('server', () => {
 	gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
 	gulp.watch('src/js/*.js', gulp.series('scripts'));
 	gulp.watch('src/assets/*', gulp.series('copy-assets', 'images-compression'));
+
+	browserSync.init({
+		server: {
+			baseDir: './dist/'
+		}
+	});
 });
 
 gulp.task('default', gulp.series('html', 'sass', 'scripts', 'copy-assets', 'images-compression'));
