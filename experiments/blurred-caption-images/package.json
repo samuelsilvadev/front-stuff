@@ -9,6 +9,6 @@
   "author": "Samuel Silva",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.2"
   }
 }
